@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../VacationDestination/Destination.swift">
+   </FileRef>
+   <FileRef
       location = "self:VacationDestination.xcodeproj">
    </FileRef>
 </Workspace>
