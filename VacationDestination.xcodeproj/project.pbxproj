@@ -15,6 +15,8 @@
 		36778DFF1B4C24E600523823 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36778DFD1B4C24E600523823 /* LaunchScreen.xib */; };
 		36778E0B1B4C24E600523823 /* VacationDestinationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36778E0A1B4C24E600523823 /* VacationDestinationTests.swift */; };
 		36778E151B4C58B900523823 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36778E141B4C58B900523823 /* Destination.swift */; };
+		36778E171B4C62A400523823 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36778E161B4C62A400523823 /* MapCell.swift */; };
+		36778E1A1B4C8CD400523823 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36778E181B4C643300523823 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		36778E091B4C24E600523823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36778E0A1B4C24E600523823 /* VacationDestinationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationDestinationTests.swift; sourceTree = "<group>"; };
 		36778E141B4C58B900523823 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Destination.swift; path = ../Destination.swift; sourceTree = "<group>"; };
+		36778E161B4C62A400523823 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		36778E181B4C643300523823 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36778E1A1B4C8CD400523823 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,7 @@
 		36778DE31B4C24E600523823 = {
 			isa = PBXGroup;
 			children = (
+				36778E181B4C643300523823 /* MapKit.framework */,
 				36778DEE1B4C24E600523823 /* VacationDestination */,
 				36778E071B4C24E600523823 /* VacationDestinationTests */,
 				36778DED1B4C24E600523823 /* Products */,
@@ -81,6 +87,7 @@
 		36778DEE1B4C24E600523823 /* VacationDestination */ = {
 			isa = PBXGroup;
 			children = (
+				36778E161B4C62A400523823 /* MapCell.swift */,
 				36778E141B4C58B900523823 /* Destination.swift */,
 				36778DF11B4C24E600523823 /* AppDelegate.swift */,
 				36778DF61B4C24E600523823 /* ViewController.swift */,
@@ -222,6 +229,7 @@
 				36778DF51B4C24E600523823 /* VacationDestination.xcdatamodeld in Sources */,
 				36778E151B4C58B900523823 /* Destination.swift in Sources */,
 				36778DF21B4C24E600523823 /* AppDelegate.swift in Sources */,
+				36778E171B4C62A400523823 /* MapCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

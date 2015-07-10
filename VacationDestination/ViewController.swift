@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -38,12 +39,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
 
         var destination1 = NSEntityDescription.insertNewObjectForEntityForName("Destination", inManagedObjectContext: context) as! Destination
-        destination1.name = "Tokoy"
+        destination1.name = "Tokyo"
+        destination1.latt = 35.689487
+        destination1.longi = 139.691706
 
         // ======================================
 
-        var destination2 = NSEntityDescription.insertNewObjectForEntityForName("Destination", inManagedObjectContext: context) as! Destination
-        destination2.name = "Provo"
+//        var destination2 = NSEntityDescription.insertNewObjectForEntityForName("Destination", inManagedObjectContext: context) as! Destination
+//        destination2.name = "Golden Gate Bridge"
+//        destination2.latt = 37.819929
+//        destination2.longi = 122.478255
 
         context.save(nil) // save
 
@@ -55,8 +60,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var destination = self.destinations[indexPath.row]
-        var cell = UITableViewCell() // creating a varibale for each one of the cells
-        cell.textLabel?.text = destination.name // changing the text of each one of the rows to show some text
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("mapCell") as! MapCell // creating a varibale for each one of the cells
+
+        cell.nameLabel.text = destination.name // changes the label for each map
+
+        var coordinate = CLLocationCoordinate2DMake(destination.latt.doubleValue, destination.longi.doubleValue) // createing coordinate setting from coreData
+
+        var span = MKCoordinateSpanMake(destination.lattDelta.doubleValue, destination.longiDelta.doubleValue) // creating a zoom point
+
+        var region = MKCoordinateRegionMake(coordinate, span) // setting the map to focus in on the region provided
+
+        cell.mapView.setRegion(region, animated: false) //drawing of the map
+
         return cell // return the cell to render on the page
     }
 }
