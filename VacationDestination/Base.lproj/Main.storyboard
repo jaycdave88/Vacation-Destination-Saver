@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,21 +17,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KB4-uQ-y9W">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KB4-uQ-y9W">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapCell" id="60M-9f-2bG" customClass="MapCell" customModule="VacationDestination" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="60M-9f-2bG" id="of6-tj-Yon">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKC-Dv-a58">
+                                                    <rect key="frame" x="0.0" y="35" width="600" height="164.5"/>
+                                                </mapView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCv-B9-lZH">
+                                                    <rect key="frame" x="13" y="16" width="574" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="nUg-IN-Ujf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oKC-Dv-a58" firstAttribute="leading" secondItem="of6-tj-Yon" secondAttribute="leading" id="GSE-jc-UHw"/>
+                                                <constraint firstItem="cCv-B9-lZH" firstAttribute="leading" secondItem="of6-tj-Yon" secondAttribute="leadingMargin" constant="5" id="IQQ-EY-Gz8"/>
+                                                <constraint firstAttribute="trailing" secondItem="oKC-Dv-a58" secondAttribute="trailing" id="M5B-Bx-mme"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cCv-B9-lZH" secondAttribute="trailing" constant="5" id="ZJ5-DT-Oe4"/>
+                                                <constraint firstItem="cCv-B9-lZH" firstAttribute="top" secondItem="of6-tj-Yon" secondAttribute="topMargin" constant="8" id="jGf-c0-sn6"/>
+                                                <constraint firstItem="oKC-Dv-a58" firstAttribute="top" secondItem="of6-tj-Yon" secondAttribute="top" constant="35" id="pct-Uw-ciY"/>
+                                                <constraint firstAttribute="bottom" secondItem="oKC-Dv-a58" secondAttribute="bottom" id="qyb-Mv-PJt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mapView" destination="oKC-Dv-a58" id="7hW-0V-2fC"/>
+                                            <outlet property="nameLabel" destination="cCv-B9-lZH" id="p8g-bN-5FP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KB4-uQ-y9W" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4ZI-9m-7jl"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KB4-uQ-y9W" secondAttribute="bottom" id="5sb-t4-uXh"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KB4-uQ-y9W" secondAttribute="bottom" id="791-xy-nHo"/>
-                            <constraint firstItem="KB4-uQ-y9W" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="LPp-tb-d93"/>
-                            <constraint firstAttribute="trailing" secondItem="KB4-uQ-y9W" secondAttribute="trailing" id="Zey-qg-EYY"/>
-                            <constraint firstItem="KB4-uQ-y9W" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="gOF-uf-AaN"/>
-                            <constraint firstAttribute="trailing" secondItem="KB4-uQ-y9W" secondAttribute="trailing" id="hLD-pE-enH"/>
-                            <constraint firstItem="KB4-uQ-y9W" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="v22-HM-R2C"/>
+                            <constraint firstItem="KB4-uQ-y9W" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Ud3-Wz-bZk"/>
+                            <constraint firstAttribute="trailing" secondItem="KB4-uQ-y9W" secondAttribute="trailing" id="Z8M-HG-vFW"/>
+                            <constraint firstItem="KB4-uQ-y9W" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="btZ-SY-37F"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KB4-uQ-y9W" secondAttribute="bottom" id="hF2-qV-Mbo"/>
                         </constraints>
                     </view>
                     <connections>
