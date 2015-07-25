@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		361D107B1B62F6570020CD24 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361D107A1B62F6570020CD24 /* MapViewController.swift */; };
+		3665CD641B62F0190042B793 /* DestinationNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665CD631B62F0190042B793 /* DestinationNameController.swift */; };
 		36778DF21B4C24E600523823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36778DF11B4C24E600523823 /* AppDelegate.swift */; };
 		36778DF51B4C24E600523823 /* VacationDestination.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36778DF31B4C24E600523823 /* VacationDestination.xcdatamodeld */; };
 		36778DF71B4C24E600523823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36778DF61B4C24E600523823 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		361D107A1B62F6570020CD24 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3665CD631B62F0190042B793 /* DestinationNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationNameController.swift; sourceTree = "<group>"; };
 		36778DEC1B4C24E600523823 /* VacationDestination.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationDestination.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36778DF01B4C24E600523823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36778DF11B4C24E600523823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		36778DEE1B4C24E600523823 /* VacationDestination */ = {
 			isa = PBXGroup;
 			children = (
+				361D107A1B62F6570020CD24 /* MapViewController.swift */,
+				3665CD631B62F0190042B793 /* DestinationNameController.swift */,
 				36778E161B4C62A400523823 /* MapCell.swift */,
 				36778E141B4C58B900523823 /* Destination.swift */,
 				36778DF11B4C24E600523823 /* AppDelegate.swift */,
@@ -230,6 +236,8 @@
 				36778E151B4C58B900523823 /* Destination.swift in Sources */,
 				36778DF21B4C24E600523823 /* AppDelegate.swift in Sources */,
 				36778E171B4C62A400523823 /* MapCell.swift in Sources */,
+				3665CD641B62F0190042B793 /* DestinationNameController.swift in Sources */,
+				361D107B1B62F6570020CD24 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +433,7 @@
 				36778E101B4C24E600523823 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36778E111B4C24E600523823 /* Build configuration list for PBXNativeTarget "VacationDestinationTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +442,7 @@
 				36778E131B4C24E600523823 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -12,7 +12,8 @@ import MapKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var tableView: UITableView! // linking the table view 
+
+    @IBOutlet weak var tableView: UITableView!     // linking the table view 
 
     var destinations : [Destination] = []
 
@@ -23,7 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.dataSource = self // needed for table view
         self.tableView.delegate = self // needed for table view
 
-        createTestDestinations() // calling function
+//        createTestDestinations() // calling function
     }
 
 
@@ -42,6 +43,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         destination1.name = "Tokyo"
         destination1.latt = 35.689487
         destination1.longi = 139.691706
+        destination1.lattDelta = 5
+        destination1.longiDelta = 5
 
         // ======================================
 
